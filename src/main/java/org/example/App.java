@@ -15,7 +15,7 @@ public class App
         Scanner numInput = new Scanner(System.in);
         Scanner stringInput = new Scanner(System.in);
         double finaltemp = 0;
-        int temp;
+        double temp;
 
         // Calculates either Fahrenheit to Celsius or Celsius to Fahrenheit based on input
         System.out.print("Press C to convert from Fahrenheit to Celsius.\nPress F to convert from Celsius to Fahrenheit.\nYour choice: ");
@@ -24,7 +24,7 @@ public class App
         if (mode.equals("C") || mode.equals("c"))
         {
             System.out.print("Please enter the temperature in Fahrenheit: ");
-            temp = numInput.nextInt();
+            temp = numInput.nextDouble();
             finaltemp = (temp - 32) * 5 / 9;
             //C = (F − 32) × 5 / 9
             System.out.printf("The temperature in Celsius is %.0f.", finaltemp);
@@ -32,7 +32,7 @@ public class App
         else if (mode.equals("F") || mode.equals("f"))
         {
             System.out.print("Please enter the temperature in Celsius: ");
-            temp = numInput.nextInt();
+            temp = numInput.nextDouble();
             finaltemp = (temp * 9 / 5) + 32;
             //F = (C × 9 / 5) + 32
             System.out.printf("The temperature in Fahrenheit is %.0f.", finaltemp);
